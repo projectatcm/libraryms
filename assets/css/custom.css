@@ -1,0 +1,33 @@
+.fa {
+	cursor: pointer;
+	transition: all 0.25s ease-in-out;
+}
+
+.fa-trash:hover {
+color: #f55;
+}
+.fa-pencil:hover {
+color: #0177B5;
+}
+
+
+.datatitles{
+}
+.overflowhidden {
+	overflow: hidden;
+
+}
+
+.modal-content{
+	border-radius: 0px;
+}
+
+.btncontainer {
+ padding-top: 25px;
+}
+
+img {
+			height:100%;
+			width:100%;
+			object-fit: cover;
+}
