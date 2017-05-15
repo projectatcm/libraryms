@@ -135,12 +135,10 @@ if($action === 'editdepartment') {
 
   //delete department
 if($action === 'deletedepartment'){
-  $id = $_POST['departmentid'];
+  $id = $_GET['id'];
 
 
-  $table = 'department';
-  $result = $admin->deleteById($table,$id);
-
+  $result = $admin->deletedepartment($id);
   echo '<script type="text/javascript">';
   echo 'alert("department name deleted");';
   echo 'window.location="add_department.php";';

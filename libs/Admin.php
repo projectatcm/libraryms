@@ -67,6 +67,12 @@ public function add_permission($username,$password) {
         return $output;
     }
 
+       public function deletedepartment($id) {
+        $query = "DELETE FROM department where id='$id'";
+        $output = $this->setData($query);
+        return $output;
+    }
+
     public function selectdepartmentByName($name) {
         $query = "SELECT * FROM department WHERE name='$name'";
         $output = $this->getData($query);

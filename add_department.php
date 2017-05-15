@@ -56,8 +56,8 @@ $admin = new Admin();
 <div class="col-md-4">
     <div class="card">
         <div class="header text-right">
-          <i class="fa fa-pencil editdepartmentbtn" data-toggle="modal" data-target="#editdepartment" data-catid="<?=$departmentid?>" data-catname="<?=$departmentname?>"></i>
-          <i class="fa fa-trash deletedepartmentbtn" data-toggle="modal" data-target="#deletedepartment" data-catid="<?=$departmentid?>"></i>
+       
+          <a href="actions.php?id=<?=$departmentid?>&action=deletedepartment"><i class="fa fa-trash deletedepartmentbtn"></i></a>
         </div>
         <div class="content">
           <h4 class="title datatitles" style="font-weight: 400;"><?=$departmentname?></h4>

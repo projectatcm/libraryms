@@ -30,8 +30,8 @@ $staff_data = $admin->getAllStaff();
                     </tr>
                 </thead>
                 <?php foreach ($staff_data as $staff){
-                    $departmentData = $admin->getdepartmentByid($staff['department']);
-                    $department_name = $departmentData[0]['name'];
+                        $departmentData = $admin->getdepartmentByid($staff['department']);
+                    @$department_name = $departmentData[0]['name'];
                     $permission = $admin->checkPermission($staff['staff_id']);
 
                     ?>

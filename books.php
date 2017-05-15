@@ -54,7 +54,7 @@ $book_categories = $book->getBookCategories();
         <?=$title?><br>
         <span style="font-size:13px;font-weight:500"><?=$catname?></span><br>
         <span style="font-size:10px;">
-          <a href="#" style="outline:none;" data-toggle="modal" class='viewmorebookdatabtn' data-target="#viewbookdatas" data-bookid="<?=$bookid?>">View More</a>
+          <a href="#" style="outline:none;" data-toggle="modal" class='viewmorebook' data-target="#viewbookdatas" data-bookid="<?=$bookid?>">View More</a>
       </span>
   </h5>
 </div>
@@ -64,7 +64,13 @@ $book_categories = $book->getBookCategories();
 
 
 </div>
+<script type="text/javascript">
+  $('.viewmorebook').click(function(){
+    var id = $(this).data('bookid');
+    $('.viewMoreBookDataDiv').load('ajaxData.php?bookid='+id+'&type=viewBookDatas');
+  })
 
+</script>
 <div class="modal fade" id="viewbookdatas" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
  <div class="modal-dialog  modal-lg" role="document">
     <div class="modal-content deleteModal">

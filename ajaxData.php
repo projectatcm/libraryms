@@ -2,10 +2,10 @@
 include './libs/Book.php';
 $book = new Book();
 
-$type = $_POST['type'];
+$type = $_GET['type'];
 
 if($type === 'viewBookDatas') {
-	$bookid = $_POST['bookid'];
+	$bookid = $_GET['bookid'];
 	$bookdata = $book->getBooks($bookid);
 	$bookdata = $bookdata[0];
 	$title = $bookdata['title'];
